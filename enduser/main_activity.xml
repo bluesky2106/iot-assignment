@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="one.demo.iot.fsb.iot_demo.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="Temperature"
+        android:textSize="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="10dp"
+    />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/temperatureGraph"
+        android:layout_marginHorizontal="10dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <Button
+                android:id="@+id/btnTurnOffAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="Tắt hết đèn"
+                android:onClick="clickToTurnOffAllLight"
+                />
+            <Button
+                android:id="@+id/btnTurnRed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="Bật đèn Đỏ"
+                android:background="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"
+                android:onClick="clickToRedLight"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <Button
+                android:id="@+id/btnAction3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="Bật đèn Vàng"
+                android:background="@android:color/holo_orange_light"
+                android:textColor="@android:color/black"
+                android:onClick="clickToYellowLight"
+                />
+            <Button
+                android:id="@+id/btnAction4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="Bật đèn Xanh"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"
+                android:onClick="clickToGreenLight"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
